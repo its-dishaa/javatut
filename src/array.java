@@ -84,9 +84,70 @@ class Main {
        ArrayList<Integer> list=new ArrayList<>();
     }
 }
+//EXAMPLE:-
+
+import java.util.Scanner;
+import java.util.ArrayList;
+class Main {
+    public static void main(String[] args) {
+         Scanner in = new Scanner(System.in); 
+
+        ArrayList<Integer>list=new ArrayList<>(5);
+        list.add(10);
+        list.add(100);
+        list.add(11);
+        list.add(156);
+        list.add(111);
+        list.add(101);
+        list.add(856);
+        System.out.println(list);
+        list.remove(Integer.valueOf(101));
+        list.set(0,22);
+        System.out.println(list);
+        for(int i=0;i<5;i++){
+            list.add(in.nextInt());
+        }
+        for(int i=0;i<5;i++){
+            System.out.println(list.get(i));
+        }
+        System.out.println(list);
+        
+    }
+}
+
+/* Multidimensional ArrayList:- A Multidimensional ArrayList is like a table — an ArrayList inside another ArrayList.
+The outer list stores multiple inner lists (which are rows).
+Each inner list holds values like columns.
+Syntax:-  
+ArrayList<ArrayList<Integer>> list = new ArrayList<>();
+
+Example:-
+*/
 
 
+import java.util.ArrayList;
+import java.util.Scanner;
 
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        ArrayList<ArrayList<Integer>> list = new ArrayList<>();
+
+        // initialisation
+        for (int i = 0; i < 3; i++) {
+            list.add(new ArrayList<>());
+        }
+
+        // add elements
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                list.get(i).add(in.nextInt());
+            }
+        }
+
+        System.out.println(list);
+    }
+}
 
 
 
