@@ -1,1 +1,1 @@
-// linear search
+//here is code for linear search
