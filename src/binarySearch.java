@@ -72,3 +72,57 @@ public class OrderAgnosticBS {
 
 
 //Questions on binary search:-
+/* Ceiling:- smallest element in an array greater or equal to target.
+    For Example:- arr={2,3,5,9,14,16,18}
+target:- 14
+    ceiling(arr,target=15)=16   */
+
+public class Ceiling{
+    public static void main(String[] args){
+        int[] arr={11,22,33,44,55,66,77,88,99,100};
+        int target=45;
+        int ans=ceilingex(arr,target);
+        System.out.println(ans);
+    }
+    static int ceilingex(int[] arr,int target){
+        int start=0;
+        int end=arr.length-1;
+        while(start<=end){
+           int  mid=start+(end-start)/2;
+            if(target<arr[mid]){
+                end=mid-1;
+            }else if(target>arr[mid]){
+                start=mid+1;
+            }else{
+                return mid;
+            }
+        }
+        return start;
+    }
+}
+
+
+/* floor:- greatest number smaller or equal to target*/
+public class Ceiling{
+    public static void main(String[] args){
+        int[] arr={11,22,33,44,55,66,77,88,99,100};
+        int target=45;
+        int ans=ceilingex(arr,target);
+        System.out.println(ans);
+    }
+    static int ceilingex(int[] arr,int target){
+        int start=0;
+        int end=arr.length-1;
+        while(start<=end){
+           int  mid=start+(end-start)/2;
+            if(target<arr[mid]){
+                end=mid-1;
+            }else if(target>arr[mid]){
+                start=mid+1;
+            }else{
+                return mid;
+            }
+        }
+        return end;
+    }
+}
